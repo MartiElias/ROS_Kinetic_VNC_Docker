@@ -25,16 +25,16 @@ The repository is organized into folders corresponding to different operating sy
 ### Building the Image
 To build the Docker image with ROS Kinetic, run the following command:
 
-\`\`\`bash
+```bash
 docker build -t ros_kinetic_vnc .
-\`\`\`
+```
 
 ### Starting the Container
 Once the image is built, you can start the container with VNC support using the following command:
 
-\`\`\`bash
+```bash
 ./start_ros_vnc.sh
-\`\`\`
+```
 
 This script will run the Docker container and enable the VNC server, allowing you to connect to the graphical environment of ROS Kinetic. By default, port 5901 will be used for the VNC connection.
 
@@ -44,16 +44,16 @@ To access the graphical environment of ROS Kinetic, open your VNC client and con
 ### Connecting to the Terminal
 If you wish to open additional terminals within the container, you can use the `connect_ros.sh` script to start a new interactive session.
 
-\`\`\`bash
+```bash
 ./connect_ros.sh
-\`\`\`
+```
 
 ### Making the Scripts Executable
 Before running the provided `.sh` scripts, make sure they have executable permissions. You can grant these permissions using the following command:
 
-\`\`\`bash
+```bash
 chmod +x file.sh
-\`\`\`
+```
 
 ### Note on Limitations
 - The container is configured to use TigerVNC due to compatibility issues with newer versions of TigerVNC and Ubuntu 16.04.
